@@ -137,12 +137,23 @@ ul, li, a, p, span, h1, h2, h3, h4, h5, h6 {
 
 .projects ul a {
   color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   transition: all 0.3s;
   font-size: 21px;
 }
 
 .projects ul a:hover {
   color: #FF2B51;
+}
+
+.projects ul a svg path {
+  transition: all 0.3s;
+}
+
+.projects ul a:hover svg path {
+  fill: #FF2B51;
 }
 
 .projects ul h2 {
