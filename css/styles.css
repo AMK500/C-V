@@ -117,7 +117,7 @@ ul, li, a, p, span, h1, h2, h3, h4, h5, h6 {
 }
 
 .d-flex {
-  padding: 50px 15px 15px 15px;
+  padding: 15px 0;
   justify-content: space-between;
 }
 
@@ -129,14 +129,10 @@ ul, li, a, p, span, h1, h2, h3, h4, h5, h6 {
   fill: #FFf;
 }
 
-.projects .dropdown {
-  position: relative;
-}
-
 .social .dropdown ul,
 .projects .dropdown ul {
   overflow-y: scroll;
-  height: 278px;
+  height: 165px;
 }
 
 .social .dropdown ul::-webkit-scrollbar,
