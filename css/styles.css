@@ -37,7 +37,7 @@ a {
 
 body {
   font-family: "Roboto", sans-serif;
-  background-image: url(../img/back.svg);
+  background-image: url(../img/back1.svg);
   background-position: center;
 }
 
@@ -88,12 +88,20 @@ ul, li, a, p, span, h1, h2, h3, h4, h5, h6 {
   justify-content: center;
 }
 
-.img .container img {
-  padding: 30px;
-  padding-bottom: 0;
-  max-width: 100%;
+.img {
+  width: 100%;
   position: fixed;
   bottom: 0;
+}
+
+.img .container {
+  max-width: 600px;
+  padding: 0;
+}
+
+.img .container img {
+  padding: 0;
+  max-width: 100%;
 }
 
 .social .container,
@@ -101,71 +109,254 @@ ul, li, a, p, span, h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 
-.social ul {
+.social .container .dropdown {
   position: absolute;
-  top: 0px;
+  top: 0;
   left: 15px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
 }
 
-.social ul a svg path {
-  transition: all 0.3s;
-}
-
-.social ul a:hover svg path {
-  fill: #FF2B51;
-}
-
-.projects ul {
+.projects .container .dropdown {
   position: absolute;
-  top: 0px;
+  top: 0;
   right: 15px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+}
+
+.projects .dropdown-list a svg path {
+  transition: all 0.3s;
+}
+
+.projects .dropdown-list a:hover svg path {
+  fill: #FFf;
+}
+
+.projects .dropdown {
+  position: relative;
+}
+
+.projects .dropdown .dropdown-btn {
   width: 160px;
+  height: 50px;
+  padding: 0 24px;
+  background-color: #fff;
+  border: 2px solid #FF2B51;
+  color: #FF2B51;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 4px;
+  margin-bottom: 4px;
+  cursor: pointer;
+  outline: none;
+  transition: all ease-in-out 0.3s;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
 }
 
-.projects ul li {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  gap: 15px;
+.projects .dropdown .dropdown-btn::after {
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='%23FF2B51'%3E%3Cpath d='M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.projects .dropdown .dropdown-btn:hover:after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='%23e8eaed'%3E%3Cpath d='M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z'/%3E%3C/svg%3E");
+}
+
+.projects .dropdown .dropdown-btn:hover {
+  background-color: #FF2B51;
   color: #fff;
 }
 
-.projects ul a {
+.projects .dropdown .dropdown-btn:focus {
+  background-color: #FF2B51;
   color: #fff;
+}
+
+.projects .dropdown .dropdown-btn:focus:after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='%23FFFFFF'%3E%3Cpath d='M480-528 296-344l-56-56 240-240 240 240-56 56-184-184Z'/%3E%3C/svg%3E");
+}
+
+.projects .dropdown-list a {
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 10px;
-  transition: all 0.3s;
-  font-size: 21px;
-}
-
-.projects ul a:hover {
   color: #FF2B51;
 }
 
-.projects ul a svg path {
+.projects .dropdown-list a span {
+  margin-left: 10px;
+}
+
+.projects .dropdown .dropdown-list {
+  display: none;
+  position: absolute;
+  list-style: none;
+  padding: 4px 0 0 0;
+  flex-direction: column;
+  gap: 4px;
+  box-shadow: var(--shadow-gray);
+  border-radius: 4px;
+}
+
+.projects .dropdown .dropdown-item {
+  text-decoration: none;
+  color: #FF2B51;
+  padding: 0 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  width: 160px;
+  height: 50px;
+  white-space: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  transition: all ease-in-out 0.3s;
+  font-size: 17px;
+  font-weight: 500;
+  background-color: #fff;
+  border: 2px solid #FF2B51;
+}
+
+.projects .dropdown .dropdown-item:hover {
+  background-color: #FF2B51;
+  color: #fff;
+}
+
+.projects .dropdown .dropdown-btn:focus + .dropdown-list {
+  display: flex;
+}
+
+.projects .dropdown .dropdown-list:hover {
+  display: flex;
+}
+
+
+
+
+
+
+
+
+
+.social .dropdown-list a svg path {
   transition: all 0.3s;
 }
 
-.projects ul a:hover svg path {
-  fill: #FF2B51;
+.social .dropdown-list a:hover svg path {
+  fill: #FFf;
 }
 
-.projects ul h2 {
-  margin-left: auto;
+.social .dropdown {
+  position: relative;
 }
 
-.projects ul h2,
-.social ul h2 {
+.social .dropdown .dropdown-btn {
+  width: 100px;
+  height: 50px;
+  padding: 0 8px;
+  background-color: #fff;
+  border: 2px solid #FF2B51;
   color: #FF2B51;
-  margin-bottom: 25px;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 4px;
+  margin-bottom: 4px;
+  cursor: pointer;
+  outline: none;
+  transition: all ease-in-out 0.3s;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
 }
+
+.social .dropdown .dropdown-btn::after {
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='%23FF2B51'%3E%3Cpath d='M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.social .dropdown .dropdown-btn:hover:after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='%23e8eaed'%3E%3Cpath d='M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z'/%3E%3C/svg%3E");
+}
+
+.social .dropdown .dropdown-btn:hover {
+  background-color: #FF2B51;
+  color: #fff;
+}
+
+.social .dropdown .dropdown-btn:focus {
+  background-color: #FF2B51;
+  color: #fff;
+}
+
+.social .dropdown .dropdown-btn:focus:after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='%23FFFFFF'%3E%3Cpath d='M480-528 296-344l-56-56 240-240 240 240-56 56-184-184Z'/%3E%3C/svg%3E");
+}
+
+.social .dropdown-list a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FF2B51;
+}
+
+.social .dropdown-list a span {
+  margin-left: 10px;
+}
+
+.social .dropdown .dropdown-list {
+  display: none;
+  position: absolute;
+  list-style: none;
+  padding: 4px 0 0 0;
+  flex-direction: column;
+  gap: 4px;
+  box-shadow: var(--shadow-gray);
+  border-radius: 4px;
+}
+
+.social .dropdown .dropdown-item {
+  text-decoration: none;
+  color: #FF2B51;
+  padding: 0 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  width: 100px;
+  height: 50px;
+  white-space: nowrap;
+  justify-content: center;
+  align-items: center;
+  transition: all ease-in-out 0.3s;
+  font-size: 17px;
+  font-weight: 500;
+  background-color: #fff;
+  border: 2px solid #FF2B51;
+}
+
+.social .dropdown .dropdown-item:hover {
+  background-color: #FF2B51;
+  color: #fff;
+}
+
+.social .dropdown .dropdown-btn:focus + .dropdown-list {
+  display: flex;
+}
+
+.social .dropdown .dropdown-list:hover {
+  display: flex;
+}
+
 
 @media (max-width: 845px) {
 
