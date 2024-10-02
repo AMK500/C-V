@@ -37,7 +37,8 @@ a {
 
 body {
   font-family: "Roboto", sans-serif;
-  background-color: var(--Black);
+  background-image: url(../img/back.svg);
+  background-position: center;
 }
 
 ul, li, a, p, span, h1, h2, h3, h4, h5, h6 {
