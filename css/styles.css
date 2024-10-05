@@ -164,76 +164,118 @@ ul, li, a, p, span, h1, h2, h3, h4, h5, h6 {
   margin-bottom: 100px;
 }
 
-.projects .item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 45px;
-}
-
 .projects .item h2 {
   font-size: 40px;
   text-shadow: 0px 5px 7px #464646;
+  text-align: center;
+  margin-bottom: 45px;
 }
 
 .projects .item .project {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-}
-
-.projects .item .project .carousel-inner {
-  max-width: 387px;
-  padding-bottom: 10px;
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.projects .item .project .items {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  gap: 30px 80px;
   flex-wrap: wrap;
-  gap: 30px;
+  justify-content: center;
 }
 
-.projects .item .project .items .item {
-  gap: 20px;
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+.swiper {
+  max-width: 300px;
+  max-height: 400px;
+}
+
+.swiper-slide {
+  max-width: 300px;
+  max-height: 400px;
   display: flex;
-  margin: 0 1px;
-  max-width: 387px;
-  overflow: hidden;
-  border-radius: 10px;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.swiper-slide {
   background-color: #fff;
-  padding: 16px 16px 35px 16px;
 }
 
-.projects .item .project .items .item img {
-  border-radius: 10px;
-  width: 100%;
+.swiper {
+  margin: 0;
 }
 
-.projects .item .project .items .item div {
+.swiper-slide .item {
+  padding: 15px;
   width: 100%;
   display: flex;
-  padding: 0 30px;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.swiper-slide .item img {
+  width: 100%;
+}
+
+.swiper-slide .item h3 {
+  color: #2D3034;
+  font-size: 25px;
+}
+
+.swiper-slide .item div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.swiper-slide .item div {
+  width: 100%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 10px;
   text-align: center;
 }
 
-.projects .item .project .items .item div h5,
-.projects .item .project .items .item div p {
+.swiper-slide .item div h5,
+.swiper-slide .item div p {
   margin-left: auto;
   margin-right: auto;
   color: #2D3034;
 }
 
-.projects .item .project .items .item .github {
+.swiper-slide .item div p {
+  font-size: 15px;
+}
+
+.swiper-slide .item .github {
   margin-left: auto;
   margin-right: auto;
   width: 120px;
@@ -250,16 +292,16 @@ ul, li, a, p, span, h1, h2, h3, h4, h5, h6 {
   transition: all 0.4s;
 }
 
-.projects .item .project .items .item .github:hover {
+.swiper-slide .item .github:hover {
   background: #2D3034;
   color: #fff;
 }
 
-.projects .item .project .items .item .github:hover svg path {
+.swiper-slide .item .github:hover svg path {
   fill: #fff;
 }
 
-.projects .item .project .items .item .demo {
+.swiper-slide .item .demo {
   margin-left: auto;
   margin-right: auto;
   width: 120px;
@@ -276,40 +318,18 @@ ul, li, a, p, span, h1, h2, h3, h4, h5, h6 {
   transition: all 0.4s;
 }
 
-.projects .item .project .items .item .demo:hover {
+.swiper-slide .item .demo:hover {
   background: #B40712;
   color: #fff;
 }
 
-.projects .item .project .items .item .demo:hover svg path {
+.swiper-slide .item .demo:hover svg path {
   fill: #fff;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
-  top: auto;
-  bottom: 48px;
-}
-
-.carousel-control-prev-icon {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='%23B40712'%3E%3Cpath d='m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z'/%3E%3C/svg%3E");
-  transform: rotate(180deg);
-}
-
-.carousel-control-next-icon {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='%23B40712'%3E%3Cpath d='m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z'/%3E%3C/svg%3E");
-}
-
-.carousel-item {
-  transition: 0.3s ease-in-out;
-}
 
 @media (max-width: 850px) {
 
-  .carousel-control-prev,
-  .carousel-control-next {
-    display: none;
-  }
 
 }
 /* #endregion projects */
